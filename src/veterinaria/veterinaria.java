@@ -9,6 +9,6 @@ package veterinaria;
  *
  * @author Fernando
  */
-public class veterinaria {
+public class Veterinaria {
     
 }
