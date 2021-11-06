@@ -26,7 +26,7 @@ public class Cliente {
     private String atencionEspecial;
     
     @OneToOne
-    @JoinColumn
+    @JoinColumn (name="Dueño")
     private Dueno dueño;
     
     public Cliente(){

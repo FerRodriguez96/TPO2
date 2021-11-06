@@ -11,20 +11,16 @@ import controlador.ControladorCliente;
  *
  * @author Fernando
  */
-public class VeterinariaVista extends javax.swing.JFrame {
+public class PeluqueriaVista extends javax.swing.JFrame {
 
-    ControladorCliente controladorCliente = new ControladorCliente();
+    private final ControladorCliente controladorCliente;
 
     /**
      * Creates new form Agenda
      */
-    public VeterinariaVista(ControladorCliente controladorCliente) {
+    public PeluqueriaVista(ControladorCliente c) {
         initComponents();
-        this.controladorCliente = controladorCliente;
-    }
-
-    public VeterinariaVista() {
-
+        this.controladorCliente = c;
     }
 
     /**
@@ -301,6 +297,15 @@ public class VeterinariaVista extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        jTextField1.setText("");
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTextField4.setText("");
+        jComboBox1.setSelectedItem("-");
+        jComboBox2.setSelectedItem("-");
+        jTextField5.setText("");
+        jTextField6.setText("");
+        jTextArea1.setText("");                                       
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -328,23 +333,18 @@ public class VeterinariaVista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VeterinariaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PeluqueriaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VeterinariaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PeluqueriaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VeterinariaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PeluqueriaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VeterinariaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PeluqueriaVista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new VeterinariaVista().setVisible(true);
-            }
-        });
+        //</editor-fold>
+        //</editor-fold>
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -20,7 +20,7 @@ public class Dueno {
     @Column (name="observaciones")
     private String observaciones;
     
-    @OneToOne
+    @OneToOne (mappedBy = "dueño", cascade = CascadeType.ALL)
     @JoinColumn (name="Mascota")
     private Cliente mascota;
     
