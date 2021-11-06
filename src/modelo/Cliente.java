@@ -26,7 +26,8 @@ public class Cliente {
     private String atencionEspecial;
     
     @OneToOne
-    private Dueño dueño;
+    @JoinColumn
+    private Dueno dueño;
     
     public Cliente(){
         
@@ -41,7 +42,7 @@ public class Cliente {
         this.atencionEspecial = atencionEspecial;
     }
 
-    public Cliente(int idCliente, String nombre, String raza, String color, String alergia, String atencionEspecial, Dueño dueño) {
+    public Cliente(int idCliente, String nombre, String raza, String color, String alergia, String atencionEspecial, Dueno dueño) {
         this.idCliente = idCliente;
         this.nombre = nombre;
         this.raza = raza;
@@ -99,11 +100,11 @@ public class Cliente {
         this.atencionEspecial = atencionEspecial;
     }
 
-    public Dueño getDueño() {
+    public Dueno getDueño() {
         return dueño;
     }
 
-    public void setDueño(Dueño dueño) {
+    public void setDueño(Dueno dueño) {
         this.dueño = dueño;
     }
 

@@ -3,8 +3,8 @@ package modelo;
 import javax.persistence.*;
 
 @Entity
-@Table (name="Dueño")
-public class Dueño {
+@Table(name="Dueno")
+public class Dueno {
     
     @Id
     @SequenceGenerator(name = "sec_due", initialValue = 1, allocationSize = 1)
@@ -21,16 +21,20 @@ public class Dueño {
     private String observaciones;
     
     @OneToOne
-    @Column (name="Mascota")
+    @JoinColumn (name="Mascota")
     private Cliente mascota;
+    
+    public Dueno(){
+        
+    }
 
-    public Dueño(String nombre, String celular, String observaciones) {
+    public Dueno(String nombre, String celular, String observaciones) {
         this.nombre = nombre;
         this.celular = celular;
         this.observaciones = observaciones;
     }
 
-    public Dueño(String nombre, String celular, String observaciones, Cliente mascota) {
+    public Dueno(String nombre, String celular, String observaciones, Cliente mascota) {
         this.nombre = nombre;
         this.celular = celular;
         this.observaciones = observaciones;

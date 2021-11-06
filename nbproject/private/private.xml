@@ -5,8 +5,8 @@
         <group>
             <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/modelo/Cliente.java</file>
             <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/META-INF/persistence.xml</file>
-            <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/veterinaria/veterinaria.java</file>
-            <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/persistencia/Persistencia.java</file>
+            <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/modelo/Dueno.java</file>
+            <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/vista/VeterinariaVista.java</file>
         </group>
     </open-files>
 </project-private>
