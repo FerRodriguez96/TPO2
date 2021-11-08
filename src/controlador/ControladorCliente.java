@@ -1,6 +1,7 @@
 
 package controlador;
 
+import javax.swing.JOptionPane;
 import persistencia.Persistencia;
 import modelo.Cliente;
 import modelo.Dueno;
@@ -12,25 +13,22 @@ public class ControladorCliente {
     public ControladorCliente(Persistencia p) {
         this.persistencia = p;
     }
-    public void CrearCliente (int id, String nombre, String raza, String color , String alergico, String atencion, String nombredueno, String celular, String observaciones){
+    public void CrearCliente (String nombre, String raza, String color , String alergico, String atencion, String nombredueno, String celular, String observaciones){
         
-        var cliente = new Cliente (id, nombre, raza, color, alergico, atencion);
-        var dueno = new Dueno(nombredueno, celular, observaciones);
-        
-        cliente.setDueño(dueno);
-        dueno.setMascota(cliente);
+            var cliente = new Cliente (nombre, raza, color, alergico, atencion);
+            var dueno = new Dueno(nombredueno, celular, observaciones);
 
-        this.persistencia.iniciarTransaccion();
-        this.persistencia.insertar(dueno);
-        this.persistencia.confirmarTransaccion();
-        
-        this.persistencia.iniciarTransaccion();
-        this.persistencia.insertar(cliente);
-        this.persistencia.confirmarTransaccion();
-        
+            cliente.setDueño(dueno);
+            dueno.setMascota(cliente);
 
-        
-        System.out.println("Guardado correctamente!");
+            this.persistencia.iniciarTransaccion();
+            this.persistencia.insertar(dueno);
+            this.persistencia.confirmarTransaccion();
 
+            this.persistencia.iniciarTransaccion();
+            this.persistencia.insertar(cliente);
+            this.persistencia.confirmarTransaccion();
+            
+            System.out.println("Guardado correctamente!");
     }
 }

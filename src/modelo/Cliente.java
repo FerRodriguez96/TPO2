@@ -7,6 +7,8 @@ import javax.persistence.*;
 public class Cliente {
     
     @Id
+    @SequenceGenerator(name = "sec_cli", initialValue = 1, allocationSize = 1)
+    @GeneratedValue(generator = "sec_cli", strategy = GenerationType.SEQUENCE)
     @Column (name="Id")
     private int idCliente;
     
@@ -33,8 +35,7 @@ public class Cliente {
         
     }
 
-    public Cliente(int idCliente, String nombre, String raza, String color, String alergia, String atencionEspecial) {
-        this.idCliente = idCliente;
+    public Cliente(String nombre, String raza, String color, String alergia, String atencionEspecial) {
         this.nombre = nombre;
         this.raza = raza;
         this.color = color;
@@ -42,8 +43,7 @@ public class Cliente {
         this.atencionEspecial = atencionEspecial;
     }
 
-    public Cliente(int idCliente, String nombre, String raza, String color, String alergia, String atencionEspecial, Dueno dueño) {
-        this.idCliente = idCliente;
+    public Cliente(String nombre, String raza, String color, String alergia, String atencionEspecial, Dueno dueño) {
         this.nombre = nombre;
         this.raza = raza;
         this.color = color;

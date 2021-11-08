@@ -4,9 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/modelo/Cliente.java</file>
-            <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/META-INF/persistence.xml</file>
+            <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/veterinaria/Peluqueria.java</file>
+            <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/vista/PeluqueriaVista.java</file>
             <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/modelo/Dueno.java</file>
-            <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/vista/VeterinariaVista.java</file>
+            <file>file:/C:/Users/Fernando/Documents/NetBeansProjects/TPO2/src/controlador/ControladorCliente.java</file>
         </group>
     </open-files>
 </project-private>
