@@ -6,6 +6,7 @@
 package vista;
 
 import controlador.ControladorCliente;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -284,11 +285,11 @@ public class PeluqueriaVista extends javax.swing.JFrame {
         String celular = jTextField6.getText();
         String observaciones = jTextArea1.getText();
         controladorCliente.CrearCliente(nombre, raza, color ,alergico, atencion, nombredueno, celular, observaciones);
+        JOptionPane.showMessageDialog(null, "Datos guardados correctamente!");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        jTextField1.setText("");
         jTextField2.setText("");
         jTextField3.setText("");
         jTextField4.setText("");
