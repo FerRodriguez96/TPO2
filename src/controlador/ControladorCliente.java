@@ -1,14 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controlador;
 
-/**
- *
- * @author Fernando
- */
+import javax.swing.JOptionPane;
+import persistencia.Persistencia;
+import modelo.Cliente;
+import modelo.Dueno;
+
 public class ControladorCliente {
     
+    Persistencia persistencia;
+    
+    public ControladorCliente(Persistencia p) {
+        this.persistencia = p;
+    }
+    public void CrearCliente (String nombre, String raza, String color , String alergico, String atencion, String nombredueno, String celular, String observaciones){
+        
+            var cliente = new Cliente (nombre, raza, color, alergico, atencion);
+            var dueno = new Dueno(nombredueno, celular, observaciones);
+
+            cliente.setDueño(dueno);
+            dueno.setMascota(cliente);
+
+            this.persistencia.iniciarTransaccion();
+            this.persistencia.insertar(dueno);
+            this.persistencia.confirmarTransaccion();
+
+            this.persistencia.iniciarTransaccion();
+            this.persistencia.insertar(cliente);
+            this.persistencia.confirmarTransaccion();
+            
+            System.out.println("Guardado correctamente!");
+    }
 }
