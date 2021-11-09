@@ -1,4 +1,4 @@
-package veterinaria;
+package peluqueria;
 
 import controlador.ControladorCliente;
 import javax.persistence.EntityManagerFactory;
